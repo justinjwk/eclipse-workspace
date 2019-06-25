@@ -1,0 +1,100 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="./jkim342.css">
+<title>JHU Annual Software Development Seminar</title>
+</head>
+<body>
+	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+	<%
+		String name = request.getParameter("name");
+		String email = request.getParameter("email");
+		String status = request.getParameter("employmentstatus");
+	%>
+
+	<table>
+		<tr>
+			<td class="tableImage"><img src="jhu_logo.png" alt="JHU Logo"
+				height=150></td>
+		</tr>
+		<tr>
+			<th>JOHNS HOPKINS ANNUAL SOFTWARE DEVELOPMENT SEMINAR</th>
+		</tr>
+		<tr>
+			<td><h2>
+					<b><%=name%></b>
+				</h2></td>
+		</tr>
+		<tr>
+			<td>You are registered as a <b><%=status%></b>
+			</td>
+		</tr>
+		<tr>
+			<td>Your e-mail confirmation will be sent to: <b><%=email%></b>
+			</td>
+		</tr>
+	</table>
+
+
+	<table>
+
+
+		<tr>
+			<th>Your Courses</th>
+			<th>Cost</th>
+		</tr>
+		<c:forEach items="${paramValues['course']}" var="selectedValue">
+			<tr>
+				<td><c:out value="${selectedValue}" /></td>
+				<td><c:choose>
+						<c:when test="${status eq 'JHU Employee')}">
+					    $850.00
+					  </c:when>
+						<c:when test="${status eq 'JHU Student'}">
+					    $1000.00
+					  </c:when>
+						<c:when test="${status eq 'Speaker'}">
+					    $0.00
+					  </c:when>
+						
+						<c:when test="${status eq 'Other'}">
+					    $1350.00
+					  </c:when>
+					</c:choose></td>
+			</tr>
+		</c:forEach>
+		<%-- <tr>
+			<td>
+				<ul>
+					<c:forEach items="${paramValues['course']}" var="selectedValue">
+						<li><c:out value="${selectedValue}" /></li>
+					</c:forEach>
+				</ul>
+			</td>
+		</tr> --%>
+
+		<%-- <c:forEach items="${vector}" var="item" >
+					<tr><td><c:out value="${item.firstName}"></c:out></td>
+					<td><c:out value="${item.lastName}"></c:out></td>
+					<td><c:out value="${item.email}"></c:out></td></tr>
+				</c:forEach> --%>
+
+
+
+
+
+
+		<tr>
+			<td>
+				<form action="index.html" method="post">
+					<input type="submit" value="Return">
+				</form>
+			</td>
+		</tr>
+	</table>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+@charset "UTF-8";
+body {
+	background-color: black;
+}
+table {
+	border-collapse: collapse;
+	background-color: #FFFFE0;
+}
+
+td {
+	text-align: left;
+}
+
+th {
+	text-algin: center;
+	font-family: Arial;
+	backgroud-color: #4CAF50;
+}

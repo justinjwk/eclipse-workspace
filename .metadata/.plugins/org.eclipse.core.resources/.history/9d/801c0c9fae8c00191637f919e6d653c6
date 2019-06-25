@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JHU Annual Software Development Seminar</title>
+</head>
+<body>
+<section>
+<h1>Contact Information</h1>
+Name: <input type="name" name="name" required><br>
+E-mail: <input type="email" name="email" required><br>
+</section>
+
+<section>
+<h1>Select Your Courses</h1>
+<select name="course" size="6" multiple>
+<option value="A4">A4 - Web Services</option>
+<option value="A1">A1 - J2EE Design Patterns</option>
+<option value="A3">A3 - Service Oriented Architectures</option>
+<option value="A4">A4 - Enterprise Service Bus</option>
+<option value="A6">A6 - Secure Messaging</option>
+<option value="A5">A5 - Web Service Security</option>
+
+
+</select>
+</section>
+
+</body>
+</html>

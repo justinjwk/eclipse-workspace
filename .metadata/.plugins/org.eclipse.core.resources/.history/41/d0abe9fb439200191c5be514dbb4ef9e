@@ -1,0 +1,5 @@
+package edu.jhu.web.mod3.business;
+
+public class User {
+
+}

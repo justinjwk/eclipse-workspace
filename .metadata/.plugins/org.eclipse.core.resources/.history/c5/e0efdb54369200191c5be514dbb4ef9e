@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="./jkim342.css">
+<title>JHU Annual Software Development Seminar</title>
+</head>
+<body>
+
+<% 
+    String name = request.getParameter("name");
+    String email = request.getParameter("email");
+%>
+
+
+
+
+</body>
+</html>

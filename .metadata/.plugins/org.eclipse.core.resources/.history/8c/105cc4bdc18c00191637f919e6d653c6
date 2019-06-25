@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="./jkim342.css">
+<title>JHU Annual Software Development Seminar</title>
+</head>
+<body>
+	<table>
+		<tr>
+			<td class="tableImage"><img src="jhu_logo.png" alt="JHU Logo"
+				height=150></td>
+		</tr>
+		<tr>
+			<th>JOHNS HOPKINS ANNUAL SOFTWARE DEVELOPMENT SEMINAR</th>
+		</tr>
+		<tr>
+			<td>
+				<form>
+					<fieldset>
+						<legend>Contact Information</legend>
+						Name: <input type="name" name="name" required><br>
+						E-mail: <input type="email" name="email" required><br>
+					</fieldset>
+					<br>
+
+					<fieldset>
+						<legend>Select Your Courses</legend>
+						<select name="course" size="6" multiple required>
+							<option value="A1">A1 - Web Services</option>
+							<option value="A2">A2 - J2EE Design Patterns</option>
+							<option value="A3">A3 - Service Oriented Architectures</option>
+							<option value="A4">A4 - Enterprise Service Bus</option>
+							<option value="A5">A5 - Secure Messaging</option>
+							<option value="A6">A6 - Web Service Security</option>
+						</select>
+					</fieldset>
+					<br>
+
+					<fieldset>
+						<legend>Employment Status</legend>
+						<input type="radio" name="employmentstatus" value="employee"
+							required>JHU Employee <input type="radio"
+							name="employmentstatus" value="student">JHU Student <input
+							type="radio" name="employmentstatus" value="speaker">Speaker
+						<input type="radio" name="employmentstatus" value="ohter">Other
+					</fieldset>
+					<br>
+
+					<fieldset>
+						<legend>Additional Fees and Charges</legend>
+						<input type="checkbox" name="hotel">Hotel Accommodation
+						(Conference Guest Special Fee - Parking Included)<br> <input
+							type="checkbox" name="parking">Parking Permit
+					</fieldset>
+					<br>
+
+					<input type="submit" value="Compute Seminar Costs"> 
+					<input type="hidden" name="action" value="register">
+					<br>
+				</form>
+			</td>
+		</tr>
+	</table>
+
+</body>
+</html>

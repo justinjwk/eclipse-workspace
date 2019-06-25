@@ -1,0 +1,51 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="./jkim342.css">
+<title>JHU Annual Software Development Seminar</title>
+</head>
+<body>
+
+<% 
+    String name = request.getParameter("name");
+    String email = request.getParameter("email");
+    String status = request.getParameter("employmentstatus");
+%>
+
+<table>
+		<tr>
+			<td class="tableImage"><img src="jhu_logo.png" alt="JHU Logo"
+				height=150></td>
+		</tr>
+		<tr>
+			<th>JOHNS HOPKINS ANNUAL SOFTWARE DEVELOPMENT SEMINAR</th>
+		</tr>
+		<tr>
+			<td><h2><b><%= name %></b></h2></td>
+		</tr>
+		<tr>
+			<td><p>You are registered as a <b><%= status %></b></p></td>
+		</tr>
+		<tr>
+			<td><p>Your e-mail confirmation will be sent to: <b><%= email %></b></p></td>
+		</tr>
+		
+		
+		
+		
+		
+		
+		<tr>
+			<td>
+				<form action="index.html" method="post">
+					<input type="submit" value="Return">
+				</form>
+			</td>
+		</tr>
+</table>
+
+</body>
+</html>

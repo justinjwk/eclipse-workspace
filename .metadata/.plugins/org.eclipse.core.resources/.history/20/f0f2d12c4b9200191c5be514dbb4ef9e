@@ -1,0 +1,37 @@
+
+body {
+	background-color: black;
+}
+
+table {
+	border-collapse: collapse;
+	background-color: #FFFFE0;
+}
+
+td {
+	padding: 8px;
+	
+	text-align: left;
+}
+
+th {
+	text-algin: center;
+	font-family: Arial;
+	padding: 20px;
+}
+
+img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.tableImage {
+	background-color: #1e376b;
+}
+
+.cost {
+    text-align: right;
+    border-bottom: 1px solid;
+}
+

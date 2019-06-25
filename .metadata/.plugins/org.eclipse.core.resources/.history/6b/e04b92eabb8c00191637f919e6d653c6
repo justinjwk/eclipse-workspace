@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JHU Annual Software Development Seminar</title>
+</head>
+<body>
+
+	<table>
+		<tr>
+			<td><img src="jhu_logo.png" height=150></td>
+		</tr>
+		<tr>
+			<td>JOHNS HOPKINS ANNUAL SOFTWARE DEVELOPMENT SEMINAR</td>
+		</tr>
+		<tr>
+			<td>
+				<form>
+					<fieldset>
+						<legend>Contact Information</legend>
+						Name: <input type="name" name="name" required><br>
+						E-mail: <input type="email" name="email" required><br>
+					</fieldset>
+
+					<section>
+						<h1>Select Your Courses</h1>
+						<select name="course" size="6" multiple required>
+							<option value="A1">A1 - Web Services</option>
+							<option value="A2">A2 - J2EE Design Patterns</option>
+							<option value="A3">A3 - Service Oriented Architectures</option>
+							<option value="A4">A4 - Enterprise Service Bus</option>
+							<option value="A5">A5 - Secure Messaging</option>
+							<option value="A6">A6 - Web Service Security</option>
+						</select>
+					</section>
+
+					<section>
+						<h1>Employment Status</h1>
+						<input type="radio" name="employmentstatus" value="employee"
+							required>JHU Employee <input type="radio"
+							name="employmentstatus" value="student">JHU Student <input
+							type="radio" name="employmentstatus" value="speaker">Speaker
+						<input type="radio" name="employmentstatus" value="ohter">Other
+					</section>
+
+					<section>
+						<h1>Additional Fees and Charges</h1>
+						<input type="checkbox" name="hotel">Hotel Accommodation
+						(Conference Guest Special Fee - Parking Included)<br> <input
+							type="checkbox" name="parking">Parking Permit
+					</section>
+
+					<input type="submit" value="Submit"> <input type="hidden"
+						name="action" value="register">
+				</form>
+</body>
+</td>
+</tr>
+
+</table>
+
+</html>

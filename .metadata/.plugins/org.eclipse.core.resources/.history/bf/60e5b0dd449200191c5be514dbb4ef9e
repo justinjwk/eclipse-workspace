@@ -1,0 +1,62 @@
+package edu.jhu.web.mod3.business;
+
+import java.io.Serializable;
+
+public class User implements Serializable {
+
+    private String name;
+    private String email;
+    private String status;
+    private String[] courses;
+
+    public User() {
+        name = "";
+        email = "";
+        status = "";
+        courses = null;
+    }
+    
+    
+
+	public User(String name, String email, String status, String[] courses) {
+		super();
+		this.name = name;
+		this.email = email;
+		this.status = status;
+		this.courses = courses;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	public String[] getCourses() {
+		return courses;
+	}
+
+	public void setCourses(String[] courses) {
+		this.courses = courses;
+	}
+
+
+}

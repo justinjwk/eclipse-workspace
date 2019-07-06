@@ -1,8 +1,0 @@
-@charset "UTF-8";
-table {
-	color: yellow;
-}
-
-th, td {
-	align: left;
-}

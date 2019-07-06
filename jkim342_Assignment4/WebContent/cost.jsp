@@ -10,7 +10,7 @@
 <body>
 	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-	<%@ page import="edu.jhu.web.mod5.business.User"%>
+	<%@ page import="edu.jhu.web.mod4.business.User"%>
 	<%
 		String name = request.getParameter("name");
 		String email = request.getParameter("email");

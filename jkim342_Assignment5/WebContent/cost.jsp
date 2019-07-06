@@ -9,39 +9,38 @@
 </head>
 <body>
 	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 	<%@ page import="edu.jhu.web.mod5.business.User"%>
 	<%
 		String name = request.getParameter("name");
 		String email = request.getParameter("email");
 		String status = request.getParameter("employmentstatus");
-		/* String[] courses = request.getParameter("course"); */
-		/* String[] additionalFees[] = request.getParameter("additionalFee"); */
+		String[] courses = request.getParameterValues("course");
+		/* String[] additionalFees[] = request.getParameterValues("additionalFee"); */ 
 
 		User user = new User(name, email, status, null);
 	%>
 
 	<table>
 		<tr>
-			<td class="tableImage" colspan="3"><img src="jhu_logo.png"
+			<td class="tableImage" colspan="4"><img src="jhu_logo.png"
 				alt="JHU Logo" height=150></td>
 		</tr>
 		<tr>
-			<th class="bottomBorder" colspan="3">JOHNS HOPKINS ANNUAL
+			<th class="bottomBorder" colspan="4">JOHNS HOPKINS ANNUAL
 				SOFTWARE DEVELOPMENT SEMINAR</th>
 		</tr>
 
 		<tr>
-			<td colspan="3"><h2>
+			<td colspan="4"><h2>
 					<b><%=user.getName()%></b>
 				</h2></td>
 		</tr>
 		<tr>
-			<td colspan="3">You are registered as a <b><%=user.getStatus()%></b>
+			<td colspan="4">You are registered as a <b><%=user.getStatus()%></b>
 			</td>
 		</tr>
 		<tr>
-			<td colspan="3">Your e-mail confirmation will be sent to: <b><%=user.getEmail()%></b>
+			<td colspan="4">Your e-mail confirmation will be sent to: <b><%=user.getEmail()%></b>
 			</td>
 		</tr>
 
@@ -49,17 +48,39 @@
 			<th class="bottomBorder" colspan="2">Your Courses</th>
 
 			<th class="bottomBorder">Cost</th>
+			<th class="bottomBorder"></th>
 		</tr>
-		<c:forEach items="${paramValues['course']}" var="selectedValue">
+		
+		<c:forEach items="${courses}" var="course">
 			<tr>
-				<td class="bottomBorder"><c:out value="${selectedValue}" /></td>
+				<td class="bottomBorder"><c:out value="${course}" /></td>
 				<td class="bottomBorder"></td>
-				<td class="cost">$<%=user.getCourseFee()%> <% user.addTotal(user.getCourseFee()); %>
+				<td class="cost">$<%=user.getCourseFee()%> <% user.addTotal(user.getCourseFee()); %></td>
+				<td class="bottomBorder">
+					<form action="" method="post">
+						<input type="hidden" name="removeCourse" value="${user.removeCourse(course)}">
+						<input type="hidden" name="removeCourseFee" value="${user.substractTotal(user.getCourseFee()) }">
+						<input type="submit" value="Remove">
+					</form>
 				</td>
 			</tr>
 		</c:forEach>
+		
+		
+		<%-- <c:forEach items="${paramValues['course']}" var="selectedValue">
+			<tr>
+				<td class="bottomBorder"><c:out value="${selectedValue}" /></td>
+				<td class="bottomBorder"></td>
+				<td class="cost">$<%=user.getCourseFee()%> <% user.addTotal(user.getCourseFee()); %></td>
+				<td class="bottomBorder">
+					<form action="" method="post">
+						<input type="submit" value="Remove">
+					</form>
+				</td>
+			</tr>
+		</c:forEach> --%>
 		<tr>
-			<td colspan="3"><br></td>
+			<td colspan="4"><br></td>
 		</tr>
 
 		<c:forEach items="${paramValues['additionalFee']}" var="selectedValue">
@@ -91,6 +112,7 @@
 						 %>
 					</c:if>
 				</td>
+				<td class="bottomBorder"></td>
 			</tr>
 		</c:forEach>
 		
@@ -99,14 +121,30 @@
 			<td class="bottomBorder"></td>
 			<td class="cost"><b>Total</b></td>
 			<td class="cost">$<%= user.getTotal() %></td>
+			<td class="bottomBorder"></td>
 		</tr>
 
 		<tr>
-			<td colspan="3">
-				<form action="index.html" method="post">
-					<input type="submit" value="Return">
+			<td>
+				<form action="" method="post">
+					<input type="hidden" name="action" value="edit">
+					<input type="submit" value="Edit Information">
 				</form>
 			</td>
+			<td>
+				<form action="" method="post">
+					<input type="hidden" name="action" value="add">
+					<input type="submit" value="Add More Courses">
+				</form>
+			</td>
+			<td></td>
+			<td>
+				<form action="" method="post">
+					<input type="hidden" name="action" value="confirm">
+					<input type="submit" value="Confirm Registration">
+				</form>
+			</td>
+			
 		</tr>
 	</table>
 

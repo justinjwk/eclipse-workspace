@@ -5,7 +5,29 @@
 		</list>
 	</section>
 	<section name="ChooseWorkspaceDialogSettings">
-		<item value="216" key="DIALOG_X_ORIGIN"/>
-		<item value="216" key="DIALOG_Y_ORIGIN"/>
+		<item key="DIALOG_X_ORIGIN" value="216"/>
+		<item key="DIALOG_Y_ORIGIN" value="216"/>
+	</section>
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/Users/Justin/Downloads/Module 5 Code Samples"/>
+			<item value="/Users/Justin/Downloads/Module 4 Code Samples"/>
+			<item value="/Users/Justin/Downloads/Module 3 Code Samples"/>
+			<item value="/Users/Justin/Downloads/Module 3 Code Samples/Module3-JavaBeans-3"/>
+			<item value="/Users/Justin/Downloads/Module 3 Code Samples/Module3-JSP-param-2"/>
+			<item value="/Users/Justin/Downloads/Module 3 Code Samples/Module3-JSP-Request-1"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+	<section name="NewWizardAction">
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jst.servlet.ui.project.facet.WebProjectWizard"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.wst.web.ui"/>
+		</list>
 	</section>
 </section>

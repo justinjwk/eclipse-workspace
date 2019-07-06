@@ -9,6 +9,10 @@ INDEX VERSION 1.131
 /Module4-Servlet-Dispatcher/src
 /Users/Justin/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/60407315.index
 /Module4-Servlet-Dispatcher/src
+/Users/Justin/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/718759463.index
+/Module5-Sessions-Cookies/src
+/Users/Justin/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/462655111.index
+/jkim342_Assignment5/src
 /Users/Justin/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/415923641.index
 /Module4-Servlet-ErrorHandler/src
 /Users/Justin/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2954303809.index
@@ -17,10 +21,14 @@ INDEX VERSION 1.131
 /Module3-JavaBeans-3/src
 /Users/Justin/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2854993289.index
 /Module4-Simple-Servlet/src
+/Users/Justin/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/948472706.index
+/jkim342_assignment5/src
 /Users/Justin/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2166075312.index
 /Module3-JSP-param-2/src
 /Users/Justin/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3951413061.index
 /Module4-Servlet-ErrorHandler/src
+/Users/Justin/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2882960184.index
+/Module5-Sessions-Cart/src
 /Users/Justin/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1596636321.index
 /jkim342_Assignment3/src
 /Users/Justin/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3116667076.index

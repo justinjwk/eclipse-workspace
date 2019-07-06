@@ -1,6 +1,9 @@
 package edu.jhu.web.mod5.business;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class User implements Serializable {
 
@@ -110,6 +113,16 @@ public class User implements Serializable {
 	
 	public void addTotal(double in) {
 		total = total + in;
+	}
+	
+	public void substractTotal(double in) {
+		total = total - in;
+	}
+	
+	public void removeCourse(String course) {
+		List<String> list = new ArrayList<String>(Arrays.asList(this.courses));
+		list.remove(course);
+		this.courses = list.toArray(new String[0]);
 	}
 	
 

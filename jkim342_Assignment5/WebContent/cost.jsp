@@ -17,7 +17,7 @@
 		String[] courses = request.getParameterValues("course");
 		/* String[] additionalFees[] = request.getParameterValues("additionalFee"); */ 
 
-		User user = new User(name, email, status, null);
+		User user = new User(name, email, status, courses);
 	%>
 
 	<table>
@@ -51,16 +51,16 @@
 			<th class="bottomBorder"></th>
 		</tr>
 		
-		<c:forEach items="${courses}" var="course">
+		<c:forEach var="course" items="${paramValues['course']}">
 			<tr>
 				<td class="bottomBorder"><c:out value="${course}" /></td>
 				<td class="bottomBorder"></td>
 				<td class="cost">$<%=user.getCourseFee()%> <% user.addTotal(user.getCourseFee()); %></td>
 				<td class="bottomBorder">
 					<form action="" method="post">
-						<input type="hidden" name="removeCourse" value="${user.removeCourse(course)}">
-						<input type="hidden" name="removeCourseFee" value="${user.substractTotal(user.getCourseFee()) }">
 						<input type="submit" value="Remove">
+						<input type="hidden" name="removeCourse" value="${course}">
+						<input type="hidden" name="removeCourseFee" value="${user.getCourseFee()}">
 					</form>
 				</td>
 			</tr>

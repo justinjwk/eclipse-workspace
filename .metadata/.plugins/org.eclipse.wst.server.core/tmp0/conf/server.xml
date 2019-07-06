@@ -149,7 +149,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="/Users/Justin/eclipse-workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/ROOT" path="" reloadable="false"/><Context docBase="/Users/Justin/eclipse-workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/jkim342_assignment5" path="/jkim342_assignment5" reloadable="true" source="org.eclipse.jst.jee.server:jkim342_assignment5"/></Host>
+      <Context docBase="/Users/Justin/eclipse-workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/ROOT" path="" reloadable="false"/><Context docBase="/Users/Justin/eclipse-workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/Module5-Sessions-Cart" path="/Module5-Sessions-Cart" reloadable="true" source="org.eclipse.jst.jee.server:Module5-Sessions-Cart"/><Context docBase="/Users/Justin/eclipse-workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/jkim342_assignment5" path="/jkim342_assignment5" reloadable="true" source="org.eclipse.jst.jee.server:jkim342_assignment5"/></Host>
     </Engine>
   </Service>
 </Server>

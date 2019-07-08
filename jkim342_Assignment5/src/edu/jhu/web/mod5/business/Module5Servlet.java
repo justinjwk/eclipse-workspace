@@ -14,55 +14,76 @@ import javax.servlet.http.HttpSession;
 public class Module5Servlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-
     public Module5Servlet() {
 
     }
-
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doPost(request, response);
 	}
 
-
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
-		String url = "/index.html";
+		String url = "/index.jsp";
 
 		ServletContext sc = getServletContext();
-		
+	
 		String name = request.getParameter("name");
 		String email = request.getParameter("email");
-		String status = request.getParameter("employmentstatus");
+		String status = request.getParameter("status");
 		String courses[] = request.getParameterValues("course");
-//		String additionalFees = request.getParameter("additionalFee");
+		double hotel = 0.0;
+		double parking = 0.0;
+		
+		if (request.getParameter("hotel") != null) {
+			hotel = Double.parseDouble(request.getParameter("hotel"));
+		}
+		
+		if (request.getParameter("parking") != null) {
+			parking = Double.parseDouble(request.getParameter("parking")); 
+		}
+		
+		HttpSession session = request.getSession();
+		User user = (User) session.getAttribute("user");
 		
 		String action = request.getParameter("action");
+				
 		if (action == null) {
-			action = "cost";
+			action = "cart";
 		}
 		
 		if (action.equals("edit")) {
-			url = "/index.html";
+			url = "/index.jsp";
 		}
-		else if (action.equals("cost")) {
+		else if (action.equals("cart")) {
 			
-			HttpSession session = request.getSession();
-			User user = (User) session.getAttribute("cost");
 			if (user == null) {
-				user = new User(name, email, status, courses);
+				user = new User(name, email, status, courses, hotel, parking);
 			}
-			
-			session.setAttribute("cost", user);
-			url = "/cost.jsp";
+			else {
+				user.setName(name);
+				user.setEmail(email);
+				user.setStatus(status);
+				user.setCourses(courses);
+				user.setHotel(hotel);
+				user.setParking(parking);
+			}
+				
+			session.setAttribute("user", user);
+			url = "/cart.jsp";
 			
 		}
 		else if (action.equals("confirm")) {
 			url = "/checkout.jsp";
 		}
+
+		else if (action.equals("remove")) {
+			String removedCourse = request.getParameter("removeCourse");
+			user.removeCourse(removedCourse);
+			url = "/cart.jsp";
+		}
 		
 		sc.getRequestDispatcher(url).forward(request, response);
-		
 		
 	}
 

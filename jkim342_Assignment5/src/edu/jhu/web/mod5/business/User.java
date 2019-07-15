@@ -42,7 +42,7 @@ public class User implements Serializable {
 		super();
 		this.name = name;
 		this.email = email;
-		this.status = status;
+		this.setStatus(status);
 		this.courses = courses;
 		this.setHotel(hotel);
 		this.setParking(parking);
@@ -102,8 +102,8 @@ public class User implements Serializable {
 	}
 
 	public void setStatus(String status) {
-		this.status = status;
 		this.setCourseFee(status);
+		this.status = status;
 	}
 
 	public void setCourseFee(double courseFee) {
@@ -124,16 +124,16 @@ public class User implements Serializable {
 	
 	public void setCourseFee(String status) {
 		if (status.equals("JHU Employee")) {
-			courseFee = 850.00;
+			this.courseFee = 850.00;
 		}
 		else if (status.equals("JHU Student")) {
-			courseFee = 1000.00;
+			this.courseFee = 1000.00;
 		}
 		else if (status.equals("Speaker")) {
-			courseFee = 0.00;
+			this.courseFee = 0.00;
 		}
 		else {
-			courseFee = 1350.00;
+			this.courseFee = 1350.00;
 		}
 	}
 

@@ -1,0 +1,19 @@
+----------------------------------------------------------------
+Sun Jul 21 22:04:12 EDT 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-016c-176c-09d2-00001de206d0 
+on database directory /Users/Justin/eclipse-workspace/jkim342DB with class loader sun.misc.Launcher$AppClassLoader@60e53b93 
+Loaded from file:/usr/local/apache-tomcat-8.5.39/db-derby-10.14.2.0-bin/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_181-b13
+user.dir=/Users/Justin/eclipse-workspace
+os.name=Mac OS X
+os.arch=x86_64
+os.version=10.14.5
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Tue Jul 30 21:34:42 EDT 2019: Shutting down Derby engine
+----------------------------------------------------------------
+Tue Jul 30 21:34:42 EDT 2019:
+Shutting down instance a816c00e-016c-176c-09d2-00001de206d0 on database directory /Users/Justin/eclipse-workspace/jkim342DB with class loader sun.misc.Launcher$AppClassLoader@60e53b93 
+----------------------------------------------------------------

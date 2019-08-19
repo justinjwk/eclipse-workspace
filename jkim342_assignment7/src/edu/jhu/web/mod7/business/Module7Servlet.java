@@ -40,7 +40,7 @@ public class Module7Servlet extends HttpServlet {
 
 		ServletContext sc = getServletContext();
 		
-		int id = 1;
+		
         String name = request.getParameter("name");
 		String email = request.getParameter("email");
 		String status = request.getParameter("status");           
@@ -67,7 +67,7 @@ public class Module7Servlet extends HttpServlet {
 		}
 		
 		if (action.equals("edit")) {
-//			url = "/index.jsp";
+			url = "/index.jsp";
 		}
 		else if (action.equals("cart")) {
 			
@@ -93,36 +93,7 @@ public class Module7Servlet extends HttpServlet {
 			
 			/**********  DB related ************/
 			String sqlResult = "";
-			
-
-			String selectAllStatement = "SELECT * FROM Registration";
-			
-//			// SELECT statement for checking User table
-//			String getRegistration_ByID_SQL = ""
-//					+ "SELECT "
-//					+ "	* "
-//					+ "from "
-//					+ "	Registration R"
-//					+ "		LEFT JOIN"
-//					+ "			User U"
-//					+ "		ON"
-//					+ "			U.userID = R.registration_id"
-//					+ "WHERE"
-//					+ "	R.registration_id = " + geID+ " AND"
-//					+ "	userID = " + getUserIDFomSession +;	
-//			
-//			String getDetailRegistration_ByID_SQL = ""
-//					+ "SELECT "
-//					+ "	* "
-//					+ "from "
-//					+ "	Reg_Courses RC"
-//					+ "		LEFT JOIN"
-//					+ "			Course C"
-//					+ "		ON"
-//					+ "			C.courseID = RC.regCoursesID"
-//					+ "WHERE"
-//					+ "	RC.registrationID = " + geID+ ";";	
-	       
+			       
 			try {
 	 
 	        	// get a connection
@@ -136,7 +107,8 @@ public class Module7Servlet extends HttpServlet {
 	            // create a statement
 	            Statement statement = connection.createStatement();
 
-	            // SQL Statement to insert an user to User table
+	            // SQL Statement
+	            // Insert an user to User table
 	            String userInsertSQL = "";
 	            userInsertSQL = "INSERT INTO User "
 						+ "(userName, userEmail, userStatus) " + 
@@ -153,7 +125,8 @@ public class Module7Servlet extends HttpServlet {
 	            	userId = rs.getInt(1);
 	            }
 
-	            // SQL Statement to insert a registration to Registration table
+	            // SQL Statement
+	            // Insert a registration to Registration table
 	            String registrationInsertSQL = "";
 	            registrationInsertSQL = "INSERT INTO Registration "
 						+ "(userID, hotelFee, parkingFee, total) " + 
@@ -171,7 +144,8 @@ public class Module7Servlet extends HttpServlet {
 	            	registrationId = rs.getInt(1);
 	            }
 	            
-	            // SQL Statement to insert courses to Reg_Courses table
+	            // SQL Statement
+	            // Insert selected courses to Reg_Courses table
 	            String reg_coursesInsertSQL = "";
 	            reg_coursesInsertSQL = "INSERT INTO Reg_Courses " +
 	            		"(registrationID, courseID, courseFee) " +
@@ -192,30 +166,40 @@ public class Module7Servlet extends HttpServlet {
 	            if (rs.next()) {
 	            	reg_coursesId = rs.getInt(1);
 	            }
-	            
-	            System.out.println("UserID = " + userId);
-	            System.out.println("RegistrationID = " + registrationId);
-	            System.out.println("SQL Statment for REG_COURSES = " + reg_coursesInsertSQL);
-	            
-	            // Adding courses to Couser Table
-//	            INSERT INTO Course (courseName)
-//	            VALUES ('A1 - Web Services'),
-//	            	   ('A2 - J2EE Design Patterns'),
-//	                   ('A3 - Service Oriented Architectures'),
-//	                   ('A4 - Enterprise Service Bus'),
-//	                   ('A5 - Secure Messaging'),
-//	                   ('A6 - Web Service Security');
-	                   
+	           
 
+	            // To retrieve user information from DB
+	            String getUserSQL = "SELECT userName, userEmail, userStatus "
+	            		+ "FROM User "
+	            		+ "WHERE userID = " + userId;
 	            
-	            // check the User table after insert the user
-	            ResultSet resultSet = statement.executeQuery(selectAllStatement);
-	            sqlResult = SQLUtil.getHtmlTable(resultSet);
+	            ResultSet resultSet = statement.executeQuery(getUserSQL);
+	            sqlResult = SQLUtil.getHtmlUserTable(resultSet);
+	            
+	            
+	            // To retrieve selected courses information from DB
+	            String getCoursesSQL = "SELECT courseName, courseFee "
+	            		+ "FROM Reg_Courses RC, Course C "
+	            		+ "WHERE RC.courseID = C.courseID "
+	            		+ "AND registrationID = " + registrationId;
+	            
+	            resultSet = statement.executeQuery(getCoursesSQL);
+	            sqlResult += SQLUtil.getHtmlCoursesTable(resultSet);
+	            
+	            
+	            // To retrieve all fees from DB
+	            String getFeesSQL = "SELECT hotelFee, parkingFee, total "
+	            		+ "FROM Registration "
+	            		+ "WHERE registrationID = " + registrationId;
+	            
+	            resultSet = statement.executeQuery(getFeesSQL);
+	            sqlResult += SQLUtil.getHtmlFeesTable(resultSet);
+	            
+	            
 	            resultSet.close();
-
-
 	            statement.close();
 	            connection.close();
+	            
 	        } catch (ClassNotFoundException e) {
 	            sqlResult = "<p>Error loading the databse driver: <br>"
 	                    + e.getMessage() + "</p>";
@@ -226,9 +210,8 @@ public class Module7Servlet extends HttpServlet {
 
 	        
 	        session.setAttribute("sqlResult", sqlResult);
-//	        session.setAttribute("sqlStatement", userInsert);
 
-	        url = "/sqlgateway.jsp";
+	        url = "/checkout.jsp";
 	        getServletContext()
 	                .getRequestDispatcher(url)
 	                .forward(request, response);		

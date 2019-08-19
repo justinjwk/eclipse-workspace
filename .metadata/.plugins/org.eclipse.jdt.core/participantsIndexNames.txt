@@ -1,6 +1,12 @@
 INDEX VERSION 1.131
+/Users/Justin/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/182631498.index
+/Module10-Protect-Resource/src
+/Users/Justin/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/467886213.index
+/Module10-Protect-Resource/src
 /Users/Justin/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2854993289.index
 /Module4-Simple-Servlet/src
+/Users/Justin/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2544597015.index
+/Module11-HTTPHeaders/src
 /Users/Justin/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/718759463.index
 /Module5-Sessions-Cookies/src
 /Users/Justin/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3116667076.index
@@ -21,6 +27,16 @@ INDEX VERSION 1.131
 /Module4-Servlet-Dispatcher/src
 /Users/Justin/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1925906571.index
 /jkim342_assignment8/src
+/Users/Justin/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/4232571944.index
+/jkim342_assignment10/src
+/Users/Justin/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3830941364.index
+/Module10-Tomcat-Users/src
+/Users/Justin/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1388427684.index
+/jkim342_project/src
+/Users/Justin/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/963357050.index
+/Module11-Filters/src
+/Users/Justin/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1031980547.index
+/jkim342_assignment9/src
 /Users/Justin/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1246717059.index
 /Module9-Email/src
 /Users/Justin/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2166075312.index
@@ -29,6 +45,8 @@ INDEX VERSION 1.131
 /Module7 - MySQL/src
 /Users/Justin/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/192546809.index
 /Module4-Servlet-MVC/src
+/Users/Justin/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3682129912.index
+/Module10-Tomcat-Users/src
 /Users/Justin/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1596636321.index
 /jkim342_Assignment3/src
 /Users/Justin/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/948472706.index
@@ -37,17 +55,23 @@ INDEX VERSION 1.131
 /Module4-Servlet-ErrorHandler/src
 /Users/Justin/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/783297495.index
 /Module7-SQL-Context/src
+/Users/Justin/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1035958300.index
+/Module10 - SSL/src
 /Users/Justin/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/462655111.index
 /jkim342_Assignment5/src
 /Users/Justin/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3568506141.index
 /jkim342_assignment7/src
 /Users/Justin/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/60407315.index
 /Module4-Servlet-Dispatcher/src
+/Users/Justin/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2425552729.index
+/Module11-Listeners/src
 /Users/Justin/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/574581886.index
 /Module3-JavaBeans-3/src
 /Users/Justin/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2954303809.index
 /jkim342_Assignment5/src
 /Users/Justin/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1274897415.index
 /Module7-ApacheDerby/src
+/Users/Justin/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1742905415.index
+/jkim342_assignment11/src
 /Users/Justin/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/733107502.index
 /jkim342_Assignment4/src

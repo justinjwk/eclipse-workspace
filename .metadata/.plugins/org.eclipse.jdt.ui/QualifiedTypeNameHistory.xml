@@ -1,4 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+<fullyQualifiedTypeName name="edu.jhu.web.mod7.sql.util.SQLUtil"/>
+<fullyQualifiedTypeName name="edu.jhu.web.mod8.util.MailUtilGmail"/>
+<fullyQualifiedTypeName name="javax.mail.MessagingException"/>
+<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="com.itextpdf.kernel.pdf.PdfWriter"/>
+<fullyQualifiedTypeName name="com.itextpdf.layout.Document"/>
+<fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+<fullyQualifiedTypeName name="com.itextpdf.text.Document"/>
+<fullyQualifiedTypeName name="com.itextpdf.text.pdf.PdfWriter"/>
+<fullyQualifiedTypeName name="com.itextpdf.text.Font"/>
+<fullyQualifiedTypeName name="com.itextpdf.text.BaseColor"/>
+<fullyQualifiedTypeName name="com.itextpdf.text.Paragraph"/>
+<fullyQualifiedTypeName name="javax.servlet.ServletOutputStream"/>
+<fullyQualifiedTypeName name="com.itextpdf.text.pdf.PdfPTable"/>
+<fullyQualifiedTypeName name="com.itextpdf.text.pdf.PdfPCell"/>
+<fullyQualifiedTypeName name="com.itextpdf.text.Phrase"/>
+<fullyQualifiedTypeName name="com.itextpdf.text.Element"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>

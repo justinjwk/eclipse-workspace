@@ -60,7 +60,7 @@
          APR (HTTP/AJP) Connector: /docs/apr.html
          Define a non-SSL/TLS HTTP/1.1 Connector on port 8080
     -->
-    <Connector connectionTimeout="20000" port="8080" protocol="HTTP/1.1" redirectPort="8443"/>
+   <Connector connectionTimeout="20000" port="8080" protocol="HTTP/1.1" redirectPort="8443"/> 
     <!-- A "Connector" using the shared thread pool-->
     <!--
     <Connector executor="tomcatThreadPool"
@@ -75,7 +75,20 @@
          AprLifecycleListener.
          Either JSSE or OpenSSL style configuration may be used regardless of
          the SSLImplementation selected. JSSE style configuration is used below.
-    -->
+	-->
+<!--
+	<Connector port="8443" protocol="org.apache.coyote.http11.Http11NioProtocol"
+			SSLEnabled="true" maxThreads="150" scheme="https" secure="true"
+			clientAuth="false" sslProtocol="TLS"
+			keystoreFile="/Users/Justin/.keystore" keystorePass="changeit"/> -->
+	<!--	<Connector
+			port="8443" protocol="org.apache.coyote.http11.Http11NioProtocol"
+			minSpareThreads="5" maxSpareThreads="75"
+			enableLookups="true" disableUploadTimeout="true"
+			acceptCount="100" maxThreads="200"
+			scheme="https" secure="true" SSLEnabled="true"
+			keystoreFile="/Users/Justin/.keystore" keystorePass="changeit"
+			clientAuth="false" sslProtocol="TLS"/> -->
     <!--
     <Connector port="8443" protocol="org.apache.coyote.http11.Http11NioProtocol"
                maxThreads="150" SSLEnabled="true">
@@ -149,7 +162,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="jkim342_assignment7" path="/jkim342_assignment7" reloadable="true" source="org.eclipse.jst.jee.server:jkim342_assignment7"/><Context docBase="Module7 - MySQL" path="/Module7_-_MySQL" reloadable="true" source="org.eclipse.jst.jee.server:Module7 - MySQL"/><Context docBase="Module7-ApacheDerby" path="/Module7-ApacheDerby" reloadable="true" source="org.eclipse.jst.jee.server:Module7-ApacheDerby"/><Context docBase="jkim342_assignment8" path="/jkim342_assignment8" reloadable="true" source="org.eclipse.jst.jee.server:jkim342_assignment8"/><Context docBase="jkim342_assignment5" path="/jkim342_assignment5" reloadable="true" source="org.eclipse.jst.jee.server:jkim342_assignment5"/></Host>
+      <Context docBase="jkim342_project" path="/jkim342_project" reloadable="true" source="org.eclipse.jst.jee.server:jkim342_project"/><Context docBase="jkim342_assignment7" path="/jkim342_assignment7" reloadable="true" source="org.eclipse.jst.jee.server:jkim342_assignment7"/><Context docBase="jkim342_assignment9" path="/jkim342_assignment9" reloadable="true" source="org.eclipse.jst.jee.server:jkim342_assignment9"/></Host>
     </Engine>
   </Service>
 </Server>

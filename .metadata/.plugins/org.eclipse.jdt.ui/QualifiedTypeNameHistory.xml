@@ -20,6 +20,7 @@
 <fullyQualifiedTypeName name="com.itextpdf.text.pdf.PdfPCell"/>
 <fullyQualifiedTypeName name="com.itextpdf.text.Phrase"/>
 <fullyQualifiedTypeName name="com.itextpdf.text.Element"/>
-<fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
 </qualifiedTypeNameHistroy>

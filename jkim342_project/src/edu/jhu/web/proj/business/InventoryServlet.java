@@ -70,14 +70,12 @@ public class InventoryServlet extends HttpServlet {
 
 	            // parse the SQL string
 	            
-	            System.out.println("Here!!!");
-	            
+
 	            ResultSet resultSet
 	                            = statement.executeQuery(selectAllBooksSQL);
 	            
 	            sqlResult = SQLUtil.getHtmlTable(resultSet);
-	            
-	            System.out.println(sqlResult);
+
 	            
 	            resultSet.close();
 	            statement.close();
@@ -103,11 +101,22 @@ public class InventoryServlet extends HttpServlet {
 		}
 		else if (action.equals("addNewBook")) {
 			
-//			String title = request.getParameter("title");
-//			String author = request.getParameter("author");
-//			String genre = request.getParameter("genre");
-//			String description = request.getParameter("description");
-//			String publishedDate = request.getParameter("publishedDate");
+			System.out.println("Why???");
+			
+			String title = request.getParameter("title");
+			String author = request.getParameter("author");
+			String genre = request.getParameter("genre");
+			String description = request.getParameter("description");
+			String publishedDate = request.getParameter("publishedDate");
+			
+			System.out.println("Title = " + title);
+			System.out.println("Author = " + author);
+			System.out.println("Genre = " + genre);
+			System.out.println("Description = " + description);
+			System.out.println("Publish Date = " + publishedDate);
+					
+					
+					
 ////			Double rating = Double.parseDouble(request.getParameter("rating"));
 //			
 //			System.out.println("genre = " + request.getParameter("genre"));

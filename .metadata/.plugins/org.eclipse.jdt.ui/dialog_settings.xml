@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item key="org.eclipse.jdt.ui.lastextjar" value="/Users/Justin/Desktop/Class/WebApplicationDevWithJava"/>
+	<item key="org.eclipse.jdt.ui.lastextjar" value="/usr/local/apache-tomcat-8.5.39/lib"/>
 	<item key="SearchScopeActionGroup.search_scope_type" value="1"/>
 	<item key="CallHierarchyViewPart.call_mode" value="0"/>
 	<item key="CallHierarchyViewPart.field_mode" value="2"/>
